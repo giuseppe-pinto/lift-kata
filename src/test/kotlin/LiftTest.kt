@@ -8,11 +8,11 @@ class LiftTest{
 
     @Test
     fun callsForAvailableLift() {
-        val expected = Status.COMING
+        val expected = Status.AVAILABLE
 
         val sut = Lift(4)
 
-        val actual: Status = sut.calls(5, Direction.DOWN)
+        val actual: Status = sut.call(5, Direction.DOWN)
 
         assertEquals(expected, actual)
     }
