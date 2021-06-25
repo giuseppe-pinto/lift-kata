@@ -10,7 +10,7 @@ class LiftTest{
     fun callsForAvailableLift() {
         val expected = Availability.AVAILABLE
 
-        val sut = Lift()
+        val sut = Lift(4)
 
         val actual: Availability = sut.calls(5, Direction.DOWN)
 
