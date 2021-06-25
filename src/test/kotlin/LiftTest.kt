@@ -1,4 +1,4 @@
-import model.Availability
+import model.Status
 import model.Direction
 import model.Lift
 import org.junit.jupiter.api.Assertions.*
@@ -8,14 +8,18 @@ class LiftTest{
 
     @Test
     fun callsForAvailableLift() {
-        val expected = Availability.AVAILABLE
+        val expected = Status.COMING
 
         val sut = Lift(4)
 
-        val actual: Availability = sut.calls(5, Direction.DOWN)
+        val actual: Status = sut.calls(5, Direction.DOWN)
 
         assertEquals(expected, actual)
     }
+
+
+
+
 
 
 
