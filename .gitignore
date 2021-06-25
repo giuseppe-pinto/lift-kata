@@ -1,0 +1,8 @@
+/target/
+**/logs
+**/logs/debug.log
+*.log
+/debug.log
+/.idea/
+# Project exclude paths
+/.gradle/
