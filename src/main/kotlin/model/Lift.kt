@@ -7,4 +7,8 @@ class Lift(currentFloor: Int) {
         return Status.AVAILABLE
     }
 
+    fun deliverTo(destinationFloor: Int) : Status {
+        return Status.NOT_AVAILABLE
+    }
+
 }
