@@ -9,10 +9,22 @@ class LiftTest{
     @Test
     fun callsForAvailableLift() {
 
-
         val expected = Status.AVAILABLE
 
-        val sut = Lift(4)
+        val sut = Lift(Status.AVAILABLE, 0)
+
+        val actual: Status = sut.call(5, Direction.DOWN)
+
+        assertEquals(expected, actual)
+
+    }
+
+    @Test
+    fun callsForANotAvailableLift() {
+
+        val expected = Status.NOT_AVAILABLE
+
+        val sut = Lift(Status.NOT_AVAILABLE, 0)
 
         val actual: Status = sut.call(5, Direction.DOWN)
 
@@ -23,7 +35,7 @@ class LiftTest{
     @Test
     fun deliveryPassenger() {
 
-        val sut = Lift(4)
+        val sut = Lift(Status.AVAILABLE, 4)
 
         val actual = sut.deliverTo(6)
 

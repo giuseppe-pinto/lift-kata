@@ -1,10 +1,10 @@
 package model
 
 
-class Lift(currentFloor: Int) {
+class Lift(private val currentStatus: Status, currentFloor: Int) {
 
     fun call(sourceFloor: Int, direction: Direction): Status {
-        return Status.AVAILABLE
+        return currentStatus
     }
 
     fun deliverTo(destinationFloor: Int) : Status {
